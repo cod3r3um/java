@@ -13,6 +13,7 @@ public class BaseBallGame {
 	
 	void makeRnd() {
 		//c1 = ___;
+		c1 = 
 		
 	}
 	void input() {

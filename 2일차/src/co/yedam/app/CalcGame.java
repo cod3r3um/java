@@ -8,8 +8,18 @@ import java.util.Scanner;
  * 
  */
 public class CalcGame {
-	double a;
-	double b;
+		double a;
+		double b;
+	
+	//1~cnt까지의 합을 계산해서 리턴
+	int sum(int cnt) {
+		int result = 0;
+		//코드 작성
+		for (int i=1; i<=cnt; i++) {
+			result += i;
+		}
+		return result;
+	}
 	
 	void input() {
 		//입력
