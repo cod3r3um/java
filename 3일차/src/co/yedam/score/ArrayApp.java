@@ -1,5 +1,10 @@
 package co.yedam.score;
 
+//1.클래스 설계도(uml)
+//2.클래스 선언
+//3.new객체 생성
+//4.객체 이용(메서드 호출)
+
 public class ArrayApp {
 	
 	int[] arr = new int[10];//0~9 10개 담겠다 선언(변경불가)
