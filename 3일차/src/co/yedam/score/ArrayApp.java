@@ -42,7 +42,6 @@ public class ArrayApp {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		ArrayApp app = new ArrayApp();
 		app.init();
 		app.total();
