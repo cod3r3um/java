@@ -18,6 +18,10 @@ public class Robot {
 		this.arm = arm;					// this는 객체를 참조하는 참조변수
 		this.leg = leg;
 	}
+	public Robot(int arm, int leg) {
+		this.arm = arm;
+		this.leg = leg;
+	}
 
 	// setter: 필드값 변경 (return 필요 없음)
 	public void setName(String name) {
@@ -45,6 +49,16 @@ public class Robot {
 	// 접근 제어자 없는 default 상태 (void print({})에서는 같은 패키지 안에 있을 때에만 접근 가능
 	public void print() {
 		System.out.printf("name: %d arm: %d leg: %d", name, arm, leg);
-	}	
-
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		Robot r2 = ((Robot)obj);
+		return r2.arm == this.arm && r2.leg == this.leg;
+	}
+	@Override
+	public String toString() {
+		return "arm: " + arm + "leg: " + leg;
+	}
+	
 }
