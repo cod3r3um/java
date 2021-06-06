@@ -22,15 +22,15 @@ public class Test2 {
 		System.out.println(var6);
 		
 		double var7 = 100.0;
-		System.out.println(var6);
+		System.out.println(var7);
 		
-		String var8 = "³ªÀÇ Á÷¾÷Àº \"°³¹ßÀÚ\"ÀÔ´Ï´Ù.";
+		String var8 = "ë‚˜ì˜ ì§ì—…ì€ \"ê°œë°œì\"ì…ë‹ˆë‹¤.";
 		System.out.println(var8);
 		
 		boolean var9 = true;
 		System.out.println(var9);
 		
-		double var10 = 1e2;	// 1e2 = 100 (1e = ½Ç¼öÇü. int ºÒ°¡)
+		double var10 = 1e2;	// 1e2 = 100 (1e = ì‹¤ìˆ˜í˜•. int ë¶ˆê°€)
 		System.out.println(var10);
 		
 		float var11 = 1e2f;
