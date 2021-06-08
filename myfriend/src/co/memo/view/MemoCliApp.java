@@ -38,22 +38,30 @@ public class MemoCliApp {
 	}
 
 	private void findContent() {
-		// TODO Auto-generated method stub
+		String content = ScannerUtil.readStr("날짜를 입력하세요. > ");
+		Memo memo = memolist.findContent(content);
+		System.out.println(memo);
 		
 	}
 
 	private void findDate() {
-		// TODO Auto-generated method stub
+		String date = ScannerUtil.readStr("내용을 입력하세요. > ");
+		Memo memo = memolist.findDate(date);
+		System.out.println(memo);
 		
 	}
 
 	private void selectAll() {
-		// TODO Auto-generated method stub
+		List<Memo> list = memolist.listAll();
+		for (Memo memo : list) {
+			System.out.println(memo);
+		}
 		
 	}
 
 	private void delete() {
-		// TODO Auto-generated method stub
+		String date = ScannerUtil.readStr("삭제할 메모의 날짜를 입력하세요. > ");
+		memolist.delete(date);
 		
 	}
 
