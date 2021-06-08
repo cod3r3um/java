@@ -1,16 +1,16 @@
 package day01;
 
 /*
- ÀÛ¼ºÀÚ: »ç»ş
- ÀÛ¼ºÀÏÀÚ: 2021-05-26
- ±â´É: 
+ ì‘ì„±ì: ì‚¬ìƒ¤
+ ì‘ì„±ì¼ì: 2021-05-26
+ ê¸°ëŠ¥: 
  */
 
 public class Hi {
-	// main ÇÔ¼ö(¸Ş¼Òµå) = ÇÁ·Î±×·¥ÀÇ ½ÃÀÛ À§Ä¡
+	// main í•¨ìˆ˜(ë©”ì†Œë“œ) = í”„ë¡œê·¸ë¨ì˜ ì‹œì‘ ìœ„ì¹˜
 	public static void main(String[] args) {
 		
-		System.out.println(Math.random());	// ¹®ÀåÀÌ ³¡³¯ ¶§ ¹İµå½Ã ;
+		System.out.println(Math.random());	// ë¬¸ì¥ì´ ëë‚  ë•Œ ë°˜ë“œì‹œ ;
 		System.out.println((int)(Math.random() * 100));
 		System.out.println("hi");
 

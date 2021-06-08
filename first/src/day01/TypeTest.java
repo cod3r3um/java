@@ -1,71 +1,74 @@
 package day01;
 
-/*
- < µ¥ÀÌÅÍÇü ¿¬½À >
-  				  200   200L   10.5f	10.5
-  				  ±âº»					±âº»
-    1		2	   4	 8		 4		 8 
-   byte > short > int > long     				  Á¤¼ö
-  							 > float > double	  ½Ç¼ö
-  		  char									  ¹®ÀÚ
-   boolean										  ³í¸®
- */
+/* < ë°ì´í„°í˜• ì—°ìŠµ >
+  				  		  200		200L 	   10.5f	    10.5
+  				  		ì •ìˆ˜ ê¸°ë³¸ê°’						  ì‹¤ìˆ˜ ê¸°ë³¸ê°’	
+    1			2	   	   4	 	 8		 	 4		 	 8 		  (ë°”ì´íŠ¸)
+   byte   >   short   >   int   >   long     				  		  : ì •ìˆ˜
+  							 			   >   float   >   double	  : ì‹¤ìˆ˜
+  		  	  char									  				  : ë¬¸ì
+   boolean										  					  : ë…¼ë¦¬
+*/
 
-/*
-   ctrl + shift + f ÁÙ Á¤¸®
-   
+/* < ë¹„êµ >
    python				java
    --------------------------------------------------------------
-  						byte	127					   (1¹ÙÀÌÆ®)
-   int (Á¤¼ö)				short	32000				   (2¹ÙÀÌÆ®)
-   						int a;  21¾ï 				   (4¹ÙÀÌÆ®)
-  						long						   (8¹ÙÀÌÆ®)
+  						byte	127					   (1ë°”ì´íŠ¸)
+   int (ì •ìˆ˜)				short	32000				   (2ë°”ì´íŠ¸)
+   						int a;  21ì–µ 				   (4ë°”ì´íŠ¸)
+  						long						   (8ë°”ì´íŠ¸)
   
-   float (½Ç¼ö) 			float   À¯È¿ÀÚ¸´¼ö 6ÀÚ¸®		   (4¹ÙÀÌÆ®)
-  						double  15ÀÚ¸® (¹èÁ¤µµ=Á¤¹Ğµµ 2¹è)  (8¹ÙÀÌÆ®)
+   float (ì‹¤ìˆ˜) 			float   ìœ íš¨ìë¦¿ìˆ˜ 6ìë¦¬		   (4ë°”ì´íŠ¸)
+  						double  15ìë¦¬ (ë°°ì •ë„=ì •ë°€ë„ 2ë°°)  (8ë°”ì´íŠ¸)
   
-   str (¹®ÀÚ) '' 			char (¹®ÀÚ ÇÑ ±ÛÀÚ)
-    		 "" 		String (¹®ÀÚ¿­)
+   str (ë¬¸ì) '' 			char (ë¬¸ì í•œ ê¸€ì)
+    		 "" 		String (ë¬¸ìì—´)
    
-   bool (True/False) 	boolean
- */
+   bool (True/False) 	boolean (true/false)
+*/
 
 public class TypeTest {
 	public static void main(String[] args) {
 		
-		//System.out.println(Integer.MAX_VALUE);
-		//System.out.println(Long.MAX_VALUE);
-		int a = 2100000000;
-		//long b = 2200000000L;
+		System.out.println(Integer.MAX_VALUE);	// 2147483647
+		System.out.println(Integer.MIN_VALUE);	// -2147483648
+		System.out.println(Long.MAX_VALUE);
+		System.out.println(Short.MAX_VALUE);
 		
-		float f = 0.123456789f;				//À¯È¿ÀÚ¸´¼ö 7ÀÚ¸®, ³ª¸ÓÁö´Â ¿Ã¸²¼ö
+		int a = 2100000000;
+		long b = 2200000000L;
+		
+		float f = 0.123456789f;				//ìœ íš¨ìë¦¿ìˆ˜ 6ìë¦¬, ë‚˜ë¨¸ì§€ëŠ” ì˜¬ë¦¼ìˆ˜
 		System.out.println(f);
 		
-		double d = 0.1234567890123456789;	//À¯È¿ÀÚ¸´¼ö 16ÀÚ¸®, ³ª¸ÓÁö´Â ¿Ã¸²¼ö
+		double d = 0.1234567890123456789;	//ìœ íš¨ìë¦¿ìˆ˜ 15ìë¦¬, ë‚˜ë¨¸ì§€ëŠ” ì˜¬ë¦¼ìˆ˜
 		System.out.println(d);
 		
-		//Áø¼öÇ¥Çö
-		//0À¸·Î ½ÃÀÛÇÏ¸é 8Áø¼ö
-		int b = 0111;
-		System.out.println("8Áø¼ö 111=" +b);
+		// ì§„ìˆ˜ í‘œí˜„
+		// 0ìœ¼ë¡œ ì‹œì‘í•˜ë©´ 8ì§„ìˆ˜
+		int b1 = 0111;
+		System.out.println("8ì§„ìˆ˜ 0111 = " + b1);
 
+		// 10ì§„ìˆ˜ë¥¼ 8ì§„ìˆ˜ë¡œ ë³€í™˜
 		int b8 = 015 + 04;
-		//10Áø¼ö¸¦ 8Áø¼ö·Î º¯È¯
 		System.out.println(b8 + " " + Integer.toOctalString(b8));
-		//0x·Î ½ÃÀÛÇÏ¸é 16Áø¼ö			
+		
+		// 0xë¡œ ì‹œì‘í•˜ë©´ 16ì§„ìˆ˜			
 		int b16 = 0xff;
 		System.out.println(b16);
-		//0b·Î ½ÃÀÛÇÏ¸é 2Áø¼ö
+		
+		// 0bë¡œ ì‹œì‘í•˜ë©´ 2ì§„ìˆ˜
 		int b2 = 0b1111;
 		System.out.println(b2);
 		
-		//char
-		System.out.println("================================");
-		char c1 = '°¡';
-		System.out.println((int)c1);			 		//10Áø¼ö
-		System.out.println(Integer.toHexString(c1));	//16Áø¼ö
+		System.out.println("=====");
+
+		// char
+		char c1 = 'ê°€';
+		System.out.println((int)c1);			 		//10ì§„ìˆ˜
+		System.out.println(Integer.toHexString(c1));	//16ì§„ìˆ˜
 		char c2 = '\uac01';
-		int c3 = 44033;
+		int c3 = 44032;
 		System.out.println(c2);
 		System.out.println((char)c3);
 	
