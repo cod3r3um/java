@@ -1,6 +1,6 @@
 package co.friend.model;
 
-public class Friend {
+public class Friend extends Object {
 	
 	protected String sort;
 	protected String name;
@@ -18,10 +18,24 @@ public class Friend {
 	public void print() {
 		System.out.printf("친구: %10s %10s %10s\n", sort, name, tel);
 	}
-
+	@Override
+	public int hashCode() {
+		return this.getSort().hashCode()
+				+ this.getName().hashCode()
+				+ this.getTel().hashCode();
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		Friend f = (Friend) obj;
+		return this.getSort().equals(f.getSort())
+				&& this.getName().equals(f.getName())
+				&& this.getTel().equals(f.getTel());
+	}
+	
 	@Override
 	public String toString() {
-		return "Friend [sort=" + sort + ", name=" + name + ", tel=" + tel + "]";
+		return "Friend [sort: " + sort + ", name: " + name + ", tel: " + tel + "]";
 	}
 
 	public String getSort() {

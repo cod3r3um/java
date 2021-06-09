@@ -2,13 +2,15 @@ package co.friend.view;
 
 import java.util.List;
 
-import co.friend.access.FriendList;
+import co.friend.access.FriendAccess;
+import co.friend.access.FriendDAO;
 import co.friend.model.Friend;
 import co.friend.util.ScannerUtil;
 
 public class FriendCliApp {
 	
-	FriendList friendList = new FriendList();
+//	FriendList friendList = new FriendList();
+	FriendAccess friendList = new FriendDAO();
 	
 	// 프로그램 시작
 	public void start() {
@@ -31,14 +33,14 @@ public class FriendCliApp {
 
 	// 메뉴 출력
 	public void menuTitle() {
-		System.out.println(" === 친구 관리 ===");
-		System.out.println(" | 1. 친구 추가 | ");
-		System.out.println(" | 2. 친구 수정 | ");
-		System.out.println(" | 3. 친구 삭제 | ");
-		System.out.println(" | 4. 전체 조회 | ");
-		System.out.println(" | 5. 이름으로 조회 | ");
-		System.out.println(" | 6. 번호로 조회 | ");
-		System.out.println(" | 0. 종료 | ");
+		System.out.println(" === 친구 관리 === ");
+		System.out.println(" 1. 친구 추가 ");
+		System.out.println(" 2. 친구 수정 ");
+		System.out.println(" 3. 친구 삭제 ");
+		System.out.println(" 4. 전체 조회 ");
+		System.out.println(" 5. 이름으로 조회 ");
+		System.out.println(" 6. 번호로 조회 ");
+		System.out.println(" 0. 종료 ");
 	}
 	
 	// 등록
