@@ -1,5 +1,6 @@
 package co.memo.view;
 
+import java.util.List;
 import java.util.Scanner;
 
 import co.friend.util.ScannerUtil;
